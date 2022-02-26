@@ -122,6 +122,9 @@ header:before {
   .mySlides {
     display: none;
   }
+  .mySlides img {
+    object-fit: cover;
+  }
   
   /* Next & previous buttons */
   .prev, .next {
