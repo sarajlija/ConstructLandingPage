@@ -20,3 +20,44 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+///NAVBAR_MOBILE
+const navbarMobile = document.querySelector(".nav__mobile")
+const toggleBar = document.querySelector(".toggle")
+const xIcon = document.querySelector(".fa-xmark")
+const menuIcon = document.querySelector(".fa-bars")
+const buttonSearch = document.querySelector("#button")
+const input = document.getElementById('input')
+
+
+
+
+toggleBar.addEventListener("click", toggle)
+function toggle() {
+  if (navbarMobile.classList.contains("show__menu")) {
+    navbarMobile.classList.remove("show__menu");
+    xIcon.style.display = "none";
+    menuIcon.style.display = "block";
+
+  } else {
+    navbarMobile.classList.add("show__menu");
+    xIcon.style.display = "block";
+    menuIcon.style.display = "none";
+
+  }
+}
+
+buttonSearch.addEventListener('click', function (e) {
+  e.preventDefault()
+  if (input.classList.contains("close__input")) {
+    input.classList.remove("close__input");
+    input.classList.add("show__input");
+   
+    console.log(input)
+    
+  } else {
+    input.classList.remove("show__input");
+    input.classList.add("close__input");
+   
+  }
+})
