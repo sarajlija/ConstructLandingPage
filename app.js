@@ -52,8 +52,7 @@ buttonSearch.addEventListener('click', function (e) {
   if (input.classList.contains("close__input")) {
     input.classList.remove("close__input");
     input.classList.add("show__input");
-   
-    console.log(input)
+      
     
   } else {
     input.classList.remove("show__input");
