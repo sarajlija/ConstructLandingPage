@@ -448,6 +448,15 @@ header:before {
 .card__wrapper p {
   margin-bottom: 88px;
 }
+
+@media (max-width:576px) {
+  .container__card {
+     padding: 0;
+  }
+  
+}
+
+
 /*OUR SERVICES************************/
 
 .container__services {
@@ -541,15 +550,13 @@ header:before {
  
   }
   .item__wrapper p {
-  width: 100;
+  width: 100%;
   margin-top: 0;
 }
 
 }
 
-
-
-/*VIDEO*********************************/
+/*VIDEO items*********************************/
 
 .container__video {
   height: 244px;
@@ -576,8 +583,22 @@ header:before {
   margin-top: 0;
   margin-bottom: 30px;
 }
-.video__items span {
-  font-size: 3.2rem;
+
+@media (max-width:768px) {
+  .container__video {
+    height: auto;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  }
+  .counter {
+    margin-bottom: 2rem;
+  }
+  .video__items h4 {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+  }
 }
 /*********FEATURES*************************/
 
@@ -630,18 +651,34 @@ header:before {
 }
 
 @media (max-width:768px) {
-  .features__container__card {
-  /*display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(338px, 1fr));*/
-
   
-  column-gap: 2rem;
-  row-gap: 2rem; 
+  .features__container__card {  display:flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  margin-bottom: 122px;
-  
-}
-  
+  margin-bottom: 122px;  
+  }
+  .card__content {
+    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  }
+  .item__wrapper {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .card__text {
+    justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  }
+  .card__img {
+    margin:0;
+  }
+
 }
 
 
@@ -690,11 +727,8 @@ header:before {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-}
-  .portfolio__item {
-    display:flex;
-    flex-direction: column;
   }
+ 
   .ul__list {
     margin-bottom: 1rem;
   }
@@ -740,6 +774,12 @@ background-color: #2D3E50;
   padding: 52px 63px 52px 63px;
   margin: auto;
   color: #ffffff;
+}
+@media (max-width:320px) {
+  .team_card_content {
+    padding: 52px 34px 52px 34px;
+  }
+  
 }
 
 /*******TESTIMONIALS***********/
